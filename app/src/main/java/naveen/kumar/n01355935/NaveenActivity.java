@@ -2,6 +2,7 @@ package naveen.kumar.n01355935;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
@@ -47,12 +48,24 @@ public class NaveenActivity extends AppCompatActivity {
     }
 
     public void nextButtonClicked(View view){
-        if(dominosButton.isChecked() || pizzaPizzaButton.isChecked() || pizzaHutButton.isChecked()){
-            Snackbar.make(view, "Button selected",Snackbar.LENGTH_LONG).show();
+        if(dominosButton.isChecked()){
+            imageChoosen("dominos_pizza");
+        }
+        else if(pizzaPizzaButton.isChecked()) {
+            imageChoosen("pizza_pizza");
+        }
+        else if(pizzaHutButton.isChecked()){
+            imageChoosen("pizza_hut");
         }
         else {
-            Snackbar.make(view, "Button not selected",Snackbar.LENGTH_LONG).show();
+            finish();
         }
+    }
+
+    public void imageChoosen(String imgName){
+        Intent intent = new Intent(this,KumarActivityOrderScreen.class);
+        intent.putExtra("imageDisplay",imgName);
+        startActivity(intent);
     }
 
 
