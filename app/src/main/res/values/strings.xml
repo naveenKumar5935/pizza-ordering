@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">NaveenAssign2</string>
+    <string name="dominos_pizzaRadio">Dominos Pizza</string>
+    <string name="pizza_pizzaRadio">Pizza Pizza</string>
+    <string name="pizza_hutRadio">Pizza Hut</string>
+    <string name="nextButton">Next</string>
+    <string name="proceed_to_paymentButton">Proceed to Payment</string>
+    <string name="toppingsTextView">Toppings:</string>
+    <string name="select_sizeTextView">Select Size:</string>
+    <string name="smallRadio">Small</string>
+    <string name="mediumRadio">Medium</string>
+    <string name="largeRadio">Large</string>
+    <string name="x_largeRadio">X-Large</string>
+    <string name="thin_crustRadio">Thin Crust</string>
+    <string name="thick_crustRadio">Thick Crust</string>
+    <string name="cheese_burstRadio">Cheese Burst</string>
+    <string name="pan_pizzaRadio">Pan Pizza</string>
+    <string name="capsicumCheck">Capsicum</string>
+    <string name="green_peppersCheck">Green peppers</string>
+    <string name="spinachCheck">Spinach</string>
+    <string name="onionsCheck">Onions</string>
+    <string name="pepperoniCheck">Pepperoni</string>
+    <string name="mushroomCheck">Mushroom</string>
+    <string name="black_olivesCheck">Black olives</string>
 </resources>
