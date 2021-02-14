@@ -22,4 +22,5 @@
     <string name="pepperoniCheck">Pepperoni</string>
     <string name="mushroomCheck">Mushroom</string>
     <string name="black_olivesCheck">Black olives</string>
+    <string name="select_crustTextView">Select Crust:</string>
 </resources>
