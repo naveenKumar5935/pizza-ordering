@@ -29,7 +29,7 @@ public class KumarActivityOrderScreen extends AppCompatActivity {
 
         int sizeID = sizeGroup.getCheckedRadioButtonId();
         int crustID = crustGroup.getCheckedRadioButtonId();
-
+        
         CheckBox capsicum = (CheckBox) findViewById(R.id.naveenCapsicumCheck);
         CheckBox gPeppers = (CheckBox) findViewById(R.id.naveenGPeppersCheck);
         CheckBox onions = (CheckBox) findViewById(R.id.naveenOnionCheck);
@@ -43,14 +43,12 @@ public class KumarActivityOrderScreen extends AppCompatActivity {
         }else{
             RadioButton sizeButton = findViewById(sizeID);
             sizeSelected = sizeButton.getText().toString();
-            Log.i("size: ",sizeSelected);
         }
         if (crustID == -1) {
             Snackbar.make(view, "Please select crust", Snackbar.LENGTH_LONG).show();
         }else {
             RadioButton crustButton = findViewById(crustID);
             crustSelected = crustButton.getText().toString();
-            Log.i("crust:",crustSelected);
         }
 
         if(capsicum.isChecked()) {
@@ -75,9 +73,11 @@ public class KumarActivityOrderScreen extends AppCompatActivity {
 
         if ((capsicum.isChecked() || gPeppers.isChecked() || onions.isChecked() || pepperoni.isChecked() || mushroom.isChecked() || bOlives.isChecked() || spinach.isChecked()) && sizeID != -1 && crustID != -1) {
             Snackbar.make(view, "Condition Satisfied", Snackbar.LENGTH_LONG).show();
-            Log.i("Size:",sizeSelected);
-            Log.i("crust: ",crustSelected);
-            Log.i("topping:",toppingList.get(0));
+            Intent intent = new Intent(this,KumarActivityPaymentScreen.class);
+            intent.putExtra("sizeSelected",sizeSelected);
+            intent.putExtra("crustSelected",crustSelected);
+            intent.putExtra("toppingSelected",toppingList);
+            startActivity(intent);
 
         }
 
