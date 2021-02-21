@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_dark_background"
+    android:background="@drawable/bg_pizza"
     tools:context=".KumarActivityOrderScreen">
 
     <TextView
-        android:id="@+id/naveenSizeView"
+        android:id="@+id/naveenCrustView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
@@ -40,7 +40,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="15dp"
         android:text="@string/toppingsTextView"
-        android:background="@color/cardview_dark_background"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
@@ -61,7 +60,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:background="@color/cardview_dark_background"
         android:text="@string/select_sizeTextView"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -114,7 +112,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="15dp"
-        android:background="@color/cardview_dark_background"
         android:padding="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/naveenSelectedStoreImg">

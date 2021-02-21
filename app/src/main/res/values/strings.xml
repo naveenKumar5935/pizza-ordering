@@ -5,7 +5,7 @@
     <string name="pizza_hutRadio">Pizza Hut</string>
     <string name="nextButton">Next</string>
     <string name="proceed_to_paymentButton">Proceed to Payment</string>
-    <string name="toppingsTextView">Toppings:</string>
+    <string name="toppingsTextView">Toppings: (Scroll to choose)</string>
     <string name="select_sizeTextView">Select Size:</string>
     <string name="smallRadio">Small</string>
     <string name="mediumRadio">Medium</string>
