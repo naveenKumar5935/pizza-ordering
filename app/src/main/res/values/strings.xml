@@ -52,4 +52,23 @@
     <string name="enter_credit_error">Enter Credit Card No.</string>
     <string name="enter_expiry_error">Enter Expiry date</string>
     <string name="enter_cvv_error">Enter CVV</string>
+    <string name="size_checkout">Size:</string>
+    <string name="crust_checkout">Crust:</string>
+    <string name="toppings_checkout">Toppings:</string>
+    <string name="name_checkout">Name:</string>
+    <string name="e_mail_checkout">E-Mail:</string>
+    <string name="phone_no_checkout">Phone No.</string>
+    <string name="address_checkout">Address:</string>
+    <string name="city_checkout">City:</string>
+    <string name="state_checkout">State:</string>
+    <string name="postal_code_checkout">Postal Code:</string>
+    <string name="credit_card_no_checkout">Credit Card No:</string>
+    <string name="expiry_date_checkout">Expiry date:</string>
+    <string name="cvv_checkout">CVV:</string>
+    <string name="confirmation_checkout">Confirmation</string>
+    <string name="check_out_checkout">Check Out</string>
+    <string name="Alert_confirmation_no">Confirmation No. </string>
+    <string name="alert_readyTime">\n Will be Ready in 30 minutes</string>
+    <string name="alert_title">Congratulations! Order is placed</string>
+
 </resources>

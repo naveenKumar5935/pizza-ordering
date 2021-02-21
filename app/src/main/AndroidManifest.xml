@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NaveenAssign2">
-        <activity android:name=".KumarActivityPaymentScreen"></activity>
+        <activity android:name=".KumarCheckOutScreen"></activity>
+        <activity android:name=".KumarActivityPaymentScreen" />
         <activity android:name=".KumarActivityOrderScreen" />
         <activity android:name=".NaveenActivity">
             <intent-filter>

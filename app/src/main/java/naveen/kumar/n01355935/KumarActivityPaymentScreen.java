@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -16,6 +17,13 @@ import com.google.android.material.snackbar.Snackbar;
 import java.util.ArrayList;
 
 public class KumarActivityPaymentScreen extends AppCompatActivity {
+
+    String size;
+    String crust;
+    String toppings;
+    String province;
+
+
 
 
     public void orderClick(View view){
@@ -29,6 +37,7 @@ public class KumarActivityPaymentScreen extends AppCompatActivity {
         EditText creditNo = findViewById(R.id.naveenCreditNo);
         EditText expiryDate = findViewById(R.id.naveenExpiryDate);
         EditText cvv = findViewById(R.id.naveenCVV);
+
 
         Boolean allConditionCheck=true;
 
@@ -108,9 +117,35 @@ public class KumarActivityPaymentScreen extends AppCompatActivity {
         }
 
         if(allConditionCheck){
-            Snackbar.make(view,"Congratulations",Snackbar.LENGTH_LONG).show();
+
+
+            Intent intent = new Intent(this,KumarCheckOutScreen.class);
+            intent.putExtra("size",size);
+            intent.putExtra("crust",crust);
+            intent.putExtra("toppings",toppings);
+            intent.putExtra("name",name.getText().toString());
+            intent.putExtra("email",email.getText().toString());
+            intent.putExtra("phone",phoneNo.getText().toString());
+            intent.putExtra("address",address.getText().toString());
+            intent.putExtra("city",city.getText().toString());
+            intent.putExtra("state",province);
+            intent.putExtra("postal",postal.getText().toString());
+            intent.putExtra("credit",creditNo.getText().toString());
+            intent.putExtra("expiry",expiryDate.getText().toString());
+            intent.putExtra("cvv",cvv.getText().toString());
+
+            startActivity(intent);
+
         }
 
+    }
+
+
+    public void pizzaValues(String size,String crust,String topping,String province){
+        this.size = size;
+        this.crust=crust;
+        this.toppings=topping;
+        this.province=province;
     }
 
 
@@ -136,24 +171,30 @@ public class KumarActivityPaymentScreen extends AppCompatActivity {
         TextView t3 = findViewById(R.id.naveenPaymentToppingsView);
 
         Intent intent = getIntent();
-        String size = getIntent().getStringExtra("sizeSelected");
-        String crust = getIntent().getStringExtra("crustSelected");
+       String size = getIntent().getStringExtra("sizeSelected");
+       String crust = getIntent().getStringExtra("crustSelected");
         ArrayList<String> list = getIntent().getStringArrayListExtra("toppingSelected");
 
-        String str = list.get(0);
+        String topp = list.get(0);
         for(int i=1;i<list.size();i++){
-            str = str + ","+list.get(i);
+            topp = topp + ","+list.get(i);
         }
 
         t1.setText(size);
         t2.setText(crust);
-        t3.setText(str);
+        t3.setText(topp);
+
+
 
         //Spinner Code for province
         String[] province = {"ON","QC","BC","PE","NS","NB","NL","MB","SK","AB","YT","NT","NU"};
-        Spinner provinceSpinner = findViewById(R.id.naveenSpinner);
+      Spinner provinceSpinner = findViewById(R.id.naveenSpinner);
         ArrayAdapter pA = new ArrayAdapter(this,android.R.layout.simple_spinner_item,province);
         pA.setDropDownViewResource(R.layout.spinner_list);
         provinceSpinner.setAdapter(pA);
+
+
+        //Calling PizzaValues
+        pizzaValues(size,crust,topp,provinceSpinner.getSelectedItem().toString());
     }
 }

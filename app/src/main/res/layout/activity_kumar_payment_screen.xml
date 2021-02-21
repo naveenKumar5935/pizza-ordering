@@ -190,12 +190,12 @@
 
     <Button
         android:id="@+id/orderButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:layout_marginBottom="10dp"
-        android:text="Order"
         android:onClick="orderClick"
+        android:text="Order"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

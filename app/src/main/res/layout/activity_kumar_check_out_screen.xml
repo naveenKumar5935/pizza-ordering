@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple"
+    tools:context=".KumarCheckOutScreen">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/naveenlinearLayout3"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/naveenCheckOutSizeDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutCrustDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutToppingsDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutNameDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutEmailDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutPhoneDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutAddressDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutCityDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutStateDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutPostalDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutCreditNoDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutExpiryDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutCVVDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/naveenlinearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="116dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/naveenCheckOutSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:text="@string/size_checkout"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutCrust"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:text="@string/crust_checkout"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutToppings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:text="@string/toppings_checkout"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:fontFamily="monospace"
+            android:text="@string/name_checkout"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:text="@string/e_mail_checkout"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:text="@string/phone_no_checkout"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:text="@string/address_checkout"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:text="@string/city_checkout"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:text="@string/state_checkout"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutPostal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:text="@string/postal_code_checkout"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutCreditNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:text="@string/credit_card_no_checkout"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutExpiry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:text="@string/expiry_date_checkout"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/naveenCheckOutCVV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:fontFamily="monospace"
+            android:text="@string/cvv_checkout"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/naveenConfirmationCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="monospace"
+        android:text="@string/confirmation_checkout"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/naveenCheckOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="@string/check_out_checkout"
+        app:cornerRadius="20sp"
+        android:onClick="alertFunction"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
