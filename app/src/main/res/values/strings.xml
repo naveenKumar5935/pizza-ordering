@@ -33,4 +33,7 @@
     <string name="credit_card_no">Credit Card No.</string>
     <string name="expiry_date">MMYY</string>
     <string name="cvv">CVV</string>
+    <string name="payment_size">Size:</string>
+    <string name="payment_crust">Crust:</string>
+    <string name="payment_toppings">Toppings:</string>
 </resources>
