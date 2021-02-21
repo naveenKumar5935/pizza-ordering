@@ -85,17 +85,17 @@
         tools:layout_editor_absoluteX="-16dp">
 
         <EditText
-            android:id="@+id/naveenFirstName"
+            android:id="@+id/naveenYourName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/first_name"
+            android:hint="@string/enter_name"
             android:inputType="textPersonName"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
         <EditText
-            android:id="@+id/naveenLastName"
+            android:id="@+id/naveenEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -195,6 +195,7 @@
         android:layout_margin="20sp"
         android:layout_marginBottom="10dp"
         android:text="Order"
+        android:onClick="orderClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

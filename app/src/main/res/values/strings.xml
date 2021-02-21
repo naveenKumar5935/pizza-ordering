@@ -23,8 +23,7 @@
     <string name="mushroomCheck">Mushroom</string>
     <string name="black_olivesCheck">Black olives</string>
     <string name="select_crustTextView">Select Crust:</string>
-    <string name="enter_name">First Name</string>
-    <string name="first_name">First Name</string>
+    <string name="enter_name">Your Name</string>
     <string name="e_mail">E-mail</string>
     <string name="phone_no">Phone No.</string>
     <string name="address">Address</string>
@@ -36,4 +35,21 @@
     <string name="payment_size">Size:</string>
     <string name="payment_crust">Crust:</string>
     <string name="payment_toppings">Toppings:</string>
+    <string name="name_length_error">Name should be atleast 3 characters</string>
+    <string name="phoneNo_length_error">Length should be 10</string>
+    <string name="postal_length_error">Length should be 6</string>
+    <string name="creditNo_length_error">Length should be 16</string>
+    <string name="expirydate_length_error">Length should be 4</string>
+    <string name="cvv_length_error">Length should be 3</string>
+    <string name="name_alpha_error">Name should only be alphabetic</string>
+    <string name="city_alpha_error">City should be alphabetic only</string>
+    <string name="enter_name_error">Enter your name</string>
+    <string name="enter_email_error">Enter your email</string>
+    <string name="enterphn_error">Enter phone no</string>
+    <string name="enter_address_error">Enter the address</string>
+    <string name="enter_postal_error">Enter Postal Code</string>
+    <string name="enter_City_error">Enter City</string>
+    <string name="enter_credit_error">Enter Credit Card No.</string>
+    <string name="enter_expiry_error">Enter Expiry date</string>
+    <string name="enter_cvv_error">Enter CVV</string>
 </resources>
