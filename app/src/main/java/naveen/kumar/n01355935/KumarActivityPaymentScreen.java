@@ -3,14 +3,20 @@ package naveen.kumar.n01355935;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -22,6 +28,7 @@ public class KumarActivityPaymentScreen extends AppCompatActivity {
     String crust;
     String toppings;
     String province;
+    String icon;
 
 
 
@@ -133,6 +140,7 @@ public class KumarActivityPaymentScreen extends AppCompatActivity {
             intent.putExtra("credit",creditNo.getText().toString());
             intent.putExtra("expiry",expiryDate.getText().toString());
             intent.putExtra("cvv",cvv.getText().toString());
+            intent.putExtra("imgName",icon);
 
             startActivity(intent);
 
@@ -141,26 +149,64 @@ public class KumarActivityPaymentScreen extends AppCompatActivity {
     }
 
 
-    public void pizzaValues(String size,String crust,String topping,String province){
+    public void pizzaValues(String size,String crust,String topping,String province, String imgName){
         this.size = size;
         this.crust=crust;
         this.toppings=topping;
         this.province=province;
+        this.icon=imgName;
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item) {
+        switch (item.getItemId()){
+
+            case R.id.naveenMenuHelp:
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.youtube.com"));
+                startActivity(intent);
+                break;
+
+            case R.id.naveenMenuName:
+                Toast.makeText(getApplicationContext(), R.string.menu_name_toast,Toast.LENGTH_LONG).show();
+                break;
+
+            case R.id.naveenMenuPizza:
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                if(icon.matches("dominos_pizza")){
+                    i.setData(Uri.parse("http://www.dominos.ca"));
+                    startActivity(i);
+                }
+                else if(icon.matches("pizza_hut")){
+                    i.setData(Uri.parse("http://www.pizzahut.ca"));
+                    startActivity(i);
+                }else {
+                    i.setData(Uri.parse("http://www.pizzapizza.ca"));
+                    Log.i("icon",icon);
+                    startActivity(i);
+                }
+
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+        return true;
+    }
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem item = menu.findItem(R.id.naveenMenuPizza);
+        item.setIcon(getResources().getIdentifier(icon,"drawable",getPackageName()));
 
 
-
-
-
-
-
-
-
-
-
-
-
+        return super.onPrepareOptionsMenu(menu);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -174,10 +220,10 @@ public class KumarActivityPaymentScreen extends AppCompatActivity {
        String size = getIntent().getStringExtra("sizeSelected");
        String crust = getIntent().getStringExtra("crustSelected");
         ArrayList<String> list = getIntent().getStringArrayListExtra("toppingSelected");
-
+        String imgName = getIntent().getStringExtra("imgName");
         String topp = list.get(0);
         for(int i=1;i<list.size();i++){
-            topp = topp + ","+list.get(i);
+            topp = topp + ", "+list.get(i);
         }
 
         t1.setText(size);
@@ -195,6 +241,6 @@ public class KumarActivityPaymentScreen extends AppCompatActivity {
 
 
         //Calling PizzaValues
-        pizzaValues(size,crust,topp,provinceSpinner.getSelectedItem().toString());
+        pizzaValues(size,crust,topp,provinceSpinner.getSelectedItem().toString(),imgName);
     }
 }

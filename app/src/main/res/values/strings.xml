@@ -69,6 +69,12 @@
     <string name="check_out_checkout">Check Out</string>
     <string name="Alert_confirmation_no">Confirmation No. </string>
     <string name="alert_readyTime">\n Will be Ready in 30 minutes</string>
-    <string name="alert_title">Congratulations! Order is placed</string>
+    <string name="naveenMenuHelp">Help</string>
+    <string name="naveenMenuPizza">Pizza</string>
+    <string name="naveenMenuName">Naveen</string>
+    <string name="menu_name_toast">Naveen App</string>
+    <string name="order_select_size">Please select size</string>
+    <string name="order_select_crust">Please select crust</string>
+    <string name="order_select_toppings">Please select toppings</string>
 
 </resources>

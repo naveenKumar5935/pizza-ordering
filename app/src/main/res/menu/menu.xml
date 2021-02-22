@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/naveenMenuHelp"
+        android:title="@string/naveenMenuHelp"
+        app:showAsAction="never">
+
+    </item>
+
+    <item
+        android:id="@+id/naveenMenuName"
+        android:title="@string/naveenMenuName"
+        app:showAsAction="ifRoom">
+
+    </item>
+
+    <item
+        android:id="@+id/naveenMenuPizza"
+        android:icon="@drawable/dominos_pizza"
+        app:showAsAction="always">
+
+    </item>
+
+</menu>

@@ -4,18 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/PaymentscreenStyle"
     android:background="@drawable/bg_pizza"
     tools:context=".KumarActivityPaymentScreen">
 
 
     <LinearLayout
-        android:layout_width="238dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="200dp"
         android:layout_height="156dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
         android:orientation="vertical"
         android:padding="10sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/naveen"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -23,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10sp"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -30,12 +35,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10sp"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/naveenPaymentToppingsView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -56,6 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10sp"
             android:text="@string/payment_size"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -64,6 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10sp"
             android:text="@string/payment_crust"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -71,6 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/payment_toppings"
+            android:textColor="@color/white"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -78,10 +88,9 @@
         android:id="@+id/naveenDetailsLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
         android:orientation="vertical"
         android:padding="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         tools:layout_editor_absoluteX="-16dp">
 
         <EditText
@@ -109,9 +118,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:maxLength="10"
             android:hint="@string/phone_no"
             android:inputType="phone"
+            android:maxLength="10"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
@@ -140,7 +149,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            />
+            android:background="#976E6E" />
 
         <EditText
             android:id="@+id/naveenPosalCode"
@@ -148,8 +157,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/postal_code"
-            android:maxLength="6"
             android:inputType="textPostalAddress"
+            android:maxLength="6"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
@@ -193,11 +202,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
-        android:layout_marginBottom="10dp"
         android:onClick="orderClick"
         android:text="Order"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/naveenDetailsLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
