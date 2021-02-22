@@ -1,3 +1,5 @@
+//Naveen Kumar N01355935 Section B
+
 package naveen.kumar.n01355935;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,13 +46,13 @@ public class KumarActivityOrderScreen extends AppCompatActivity {
         CheckBox spinach = (CheckBox) findViewById(R.id.naveenSpinachCheck);
 
         if (sizeID == -1) {
-            Snackbar.make(view, R.string.order_select_size, Snackbar.LENGTH_LONG).show();
+            Snackbar.make(view, R.string.order_select_size, Snackbar.LENGTH_SHORT).show();
         }else{
             RadioButton sizeButton = findViewById(sizeID);
             sizeSelected = sizeButton.getText().toString();
         }
         if (crustID == -1) {
-            Snackbar.make(view, R.string.order_select_crust, Snackbar.LENGTH_LONG).show();
+            Snackbar.make(view, R.string.order_select_crust, Snackbar.LENGTH_SHORT).show();
         }else {
             RadioButton crustButton = findViewById(crustID);
             crustSelected = crustButton.getText().toString();
@@ -58,21 +60,20 @@ public class KumarActivityOrderScreen extends AppCompatActivity {
 
         if(capsicum.isChecked()) {
                         toppingList.add(capsicum.getText().toString());
-        }if(onions.isChecked()){
+        } if(onions.isChecked()){
             toppingList.add(onions.getText().toString());
         }if(gPeppers.isChecked()){
             toppingList.add(gPeppers.getText().toString());
-        } if(pepperoni.isChecked()){
+        }if(pepperoni.isChecked()){
             toppingList.add(pepperoni.getText().toString());
-        }if(mushroom.isChecked()){
+        } if(mushroom.isChecked()){
             toppingList.add(mushroom.getText().toString());
         } if(bOlives.isChecked()){
             toppingList.add(bOlives.getText().toString());
         } if(spinach.isChecked()){
             toppingList.add(spinach.getText().toString());
-        }
-        else {
-                Snackbar.make(view, R.string.order_select_toppings, Snackbar.LENGTH_LONG).show();
+        } if(!capsicum.isChecked() && !gPeppers.isChecked() && !onions.isChecked() && !pepperoni.isChecked() && !mushroom.isChecked() && !bOlives.isChecked() && !spinach.isChecked()) {
+                Snackbar.make(view, R.string.order_select_toppings, Snackbar.LENGTH_SHORT).show();
             }
 
         if ((capsicum.isChecked() || gPeppers.isChecked() || onions.isChecked() || pepperoni.isChecked() || mushroom.isChecked() || bOlives.isChecked() || spinach.isChecked()) && sizeID != -1 && crustID != -1) {

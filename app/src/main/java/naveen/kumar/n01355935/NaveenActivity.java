@@ -1,3 +1,4 @@
+//Naveen Kumar N01355935 Section B
 package naveen.kumar.n01355935;
 
 import androidx.annotation.NonNull;
@@ -116,8 +117,12 @@ public class NaveenActivity extends AppCompatActivity {
                 break;
 
             case R.id.naveenMenuName:
+                RadioButton  dominosButton = (RadioButton) findViewById(R.id.naveenDominosButton);
                 RadioButton  pizzaPizzaButton = (RadioButton) findViewById(R.id.naveenPizzaButton);
+                RadioButton  pizzaHutButton = (RadioButton) findViewById(R.id.naveenPizzaHutButton);
+                dominosButton.setChecked(false);
                 pizzaPizzaButton.setChecked(true);
+                pizzaHutButton.setChecked(false);
                 Toast.makeText(getApplicationContext(),"My favourite restaurant is selected",Toast.LENGTH_LONG).show();
                 Log.i("nameID: ",String.valueOf(R.id.naveenMenuName));
                 break;

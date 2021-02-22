@@ -1,3 +1,5 @@
+//Naveen Kumar N01355935 Section B
+
 package naveen.kumar.n01355935;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -60,28 +62,34 @@ public class KumarActivityPaymentScreen extends AppCompatActivity {
                 allConditionCheck=false;
             }
         }
-        if(name.length()<3){
+        if(name.length()<3) {
             name.setError(getString(R.string.name_length_error));
             allConditionCheck=false;
         }
+        if(!email.getText().toString().contains("@") || !email.getText().toString().contains(".")){
+            email.setError("Please enter correct email");
+        }
+        if(email.getText().toString().contains(" ")){
+            email.setError("No spacing is allowed");
+        }
 
-        if(phoneNo.length()<10){
+        if(phoneNo.length()<10 || phoneNo.getText().toString().contains(" ")){
             phoneNo.setError(getString(R.string.phoneNo_length_error));
             allConditionCheck=false;
         }
-        if(postal.length()<6){
+        if(postal.length()<6 || postal.getText().toString().contains(" ")){
             postal.setError(getString(R.string.postal_length_error));
             allConditionCheck=false;
         }
-        if(creditNo.length()<16){
+        if(creditNo.length()<16 || creditNo.getText().toString().contains(" ")){
             creditNo.setError(getString(R.string.creditNo_length_error));
             allConditionCheck=false;
         }
-        if(expiryDate.length()<4){
+        if(expiryDate.length()<4 || expiryDate.getText().toString().contains(" ")){
             expiryDate.setError(getString(R.string.expirydate_length_error));
             allConditionCheck=false;
         }
-        if(cvv.length()<3){
+        if(cvv.length()<3 || cvv.getText().toString().contains(" ")){
             cvv.setError(getString(R.string.cvv_length_error));
             allConditionCheck=false;
         }
